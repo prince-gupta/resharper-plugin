@@ -95,7 +95,21 @@ At this instance of time , this plugin can only parse the xml and can show the t
 
 <p><code>sonar.resharperplugin.reportsPath=&lt;directory-path-having-resharper-xml-relative-to-property-file&gt;/</code></p>
 </li>
-<li><p>Run <code>sonar-scanner</code> command, it will sends the xml to plugin on server and server will parse it and will show results. </p></li>
+<li>
+<p>Run <code>sonar-scanner</code> command, it will sends the xml to plugin on server and server will parse it and will show results. </p>
+
+<ul>
+<li>If you want to send xml report to remote server or any other machine hosting Sonar Qube , do following steps :
+
+<ul>
+<li>Update the global settings (server URL) by editing <code>&lt;install_directory&gt;/conf/sonar-scanner.properties</code>:
+<code>Default SonarQube server</code>
+<code>sonar.host.url=http://localhost:9000</code>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>On Sonar Qube add a widget with this plugin named as <strong>Resharper Analysis Widget</strong>.</li>
 <li>After adding widget and refreshing the page plugin will get displayed to dashboard home.</li>
 </ol>
