@@ -1,0 +1,52 @@
+<%
+   it_suggestions=measure('it_suggestions')
+   it_warning=measure('it_warning')
+
+-%>
+<table width="100%">
+    <tbody>
+    <tr>
+        <td align="left" colspan="2">
+            <div class="dashbox">
+                <!--<p class="title"><%= message('widget.resharper.name') -%></p>-->
+                <p class="title">Resharper Plugin</p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" align="left">
+            <table>
+                <tr>
+                    <td>
+                        <div class="dashbox">
+                            <!--<p class="title">
+                                <%= message('widget.suggestions') -%></p>-->
+                            <p class="title">
+                                SUGGESTIONS</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="dashbox">
+                            <p class="big">
+                                <%= format_measure(it_suggestions) -%></p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="dashbox">
+                            WARNING
+                        </div>
+                    </td>
+                    <td>
+                        <div class="dashbox">
+                            <p class="big">
+                                <%= format_measure(it_warning) -%></p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
